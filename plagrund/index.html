@@ -1,25 +1,91 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flip Box</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="Somos uma agência digital apaixonada por inovação e tecnologia e arte, aqui fazemos mais que um site, criamos uma experiência.">
+    <title>Agência XPTO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="src/css/estilos.css">
 </head>
-<body>
-    <div class="flip-container">
-        <div class="flip-box">
-            <div class="flip-box-front">
-                <h2>Frente</h2>
-                <p>Conteúdo da frente da caixa</p>
-            </div>
-            <div class="flip-box-back">
-                <h2>Verso</h2>
-                <p>Conteúdo do verso da caixa</p>
-            </div>
-        </div>
-    </div>
 
-    <script src="script.js"></script>
+<body>
+    <header class="cabecalho">
+        <a href="#" class="logo">
+            <img src="src/imagens/download.gif" alt="Logo XPTO" class="imagem" id="inicio">
+            <span class="titulo">musica extreme</span>
+        </a>
+
+        <nav class="navegacao">
+            <ul class="menu">
+                <li class="item">
+                    <a href="#inicio">inicio</a>
+                </li>
+                <li class="item">
+                    <a href="#cursos">cursos</a>
+                </li>
+                <li class="item">
+                    <a href="#contato">Contato</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteudo-principal" id="inicio">
+        <section class="paineis">
+            <h1 class="titulo">Nossos Cursos</h1>
+
+            <div class="imagem-painel projeto1 mostrar"></div>
+            <div class="imagem-painel projeto2"></div>
+            <div class="imagem-painel projeto3"></div>
+
+            <a href="#" id="btn-voltar" class="seta btn-voltar">voltar</a>
+            <a href="#" id="btn-avancar" class="seta btn-avancar">avançar</a>
+        </section>
+
+         <section class="cursos" id="cursos">
+                <h3 class="subtitulo">NOSSOS CURSOS</h3>
+                <hr class="linha">
+            <div class="icons">
+                    <img src="/src/imagens/6saks.png" alt="Saxofone">
+                    <img src="/src/imagens/3bateria.png" alt="bateria">
+                    <img src="/src/imagens/4piano.png" alt="Piano">
+                    <img src="/src/imagens/8.png" alt="Coral">
+                    <img src="/src/imagens/1guitara.png" alt="Guitarra">
+                    <img src="/src/imagens/2violino.png" alt="Violino">
+             </div>
+         </section>
+            
+    </main>
+
+    <footer class="rodape" id="contato">
+        <nav class="navegacao">
+            <a href="#" class="logo">
+                <img src="src/imagens/cafe.gif" alt="Logo XPTO" class="imagem">
+                <span class="titulo">Agência XPTO</span>
+            </a>
+
+            <div class="redes-sociais">
+                <a href="#" class="rede-social">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="rede-social">
+                    <i class="fab fa-instagram-square"></i>
+                </a>
+                <a href="#" class="rede-social">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </nav>
+        <p class="copyright">© Todos os direitos reservados</p>
+    </footer>
+
+    <script src="src/js/painel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
 </body>
+
 </html>

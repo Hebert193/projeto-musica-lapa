@@ -1,0 +1,133 @@
+/* Definindo a paleta de cores */
+:root {
+    --bordo: #800020;
+    --laranja: #FF7F32;
+    --bege: #F5F5DC;
+    --cinza-claro: #D3D3D3;
+    --branco: #FFFFFF;
+    --preto: #333333;
+    --verde: #006400;
+    --azul: #00BFFF;
+}
+
+/* Resetando margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bege);
+    color: var(--preto);
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribui os itens ao longo da linha */
+    background-color: #800020;
+    padding: 20px;
+    color: var(--branco);
+}
+
+header .logo img {
+    width: 150px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+}
+
+header .search-bar {
+    flex-grow: 1; /* Faz a barra de pesquisa ocupar o espaço restante */
+    display: flex;
+    justify-content: center;
+}
+
+header .search-bar input {
+    padding: 8px;
+    width: 60%;
+    max-width: 400px; /* Limita a largura máxima da barra de pesquisa */
+    border: 2px solid var(--branco);
+    border-radius: 5px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 1.2rem;
+}
+
+header nav a:hover {
+    color: var(--laranja);
+}
+
+/* Seções */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: var(--bordo);
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: var(--preto);
+}
+
+/* Cursos */
+#cursos ul {
+    list-style: none;
+    padding: 10px;
+    font-size: 1.1rem;
+    color: var(--verde);
+}
+
+#cursos li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: var(--bordo);
+    color: var(--branco);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .footer-logo img {
+    width: 150px; /* Ajuste o tamanho da logo no rodapé conforme necessário */
+    height: auto;
+}
+
+footer .social-media a {
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 1.1rem;
+    margin: 10px;
+}
+
+footer .social-media a:hover {
+    color: #FF7F32;
+}
+
+footer .footer-text p {
+    font-size: 1.2rem;
+}
