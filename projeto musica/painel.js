@@ -1,34 +1,27 @@
-const imagens = document.querySelectorAll('.imagem-painel')
-const setaVoltar = document.getElementById('btn-voltar')
-const setaAvancar = document.getElementById('btn-avancar')
-let imagemAtual = 0
 
-function esconderImagens() {
-    imagens.forEach(imagem => {
-        imagem.classList.remove('mostrar')
-    })
-}
+    let currentIndex = 0;
+    const painéis = document.querySelectorAll('.conteudo-principal .paineis .imagem-painel');
+    const btnVoltar = document.querySelector('.btn-voltar');
+    const btnAvancar = document.querySelector('.btn-avancar');
 
-function mostrarImagem(){    
-    imagens[imagemAtual].classList.add('mostrar')
-}
-
-setaAvancar.addEventListener('click', function () {
-    if(imagemAtual !== imagens.length - 1) {
-        imagemAtual++        
+    function atualizarCarrossel() {
+        painéis.forEach((painel, index) => {
+            painel.classList.remove('mostrar');
+            if (index === currentIndex) {
+                painel.classList.add('mostrar');
+            }
+        });
     }
 
-    esconderImagens()
-    mostrarImagem()
-})
+    btnVoltar.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? painéis.length - 1 : currentIndex - 1;
+        atualizarCarrossel();
+    });
 
-setaVoltar.addEventListener('click', function () {
-    if (imagemAtual !== 0) {
-        imagemAtual--
-    }
+    btnAvancar.addEventListener('click', () => {
+        currentIndex = (currentIndex === painéis.length - 1) ? 0 : currentIndex + 1;
+        atualizarCarrossel();
+    });
 
-    esconderImagens()
-    mostrarImagem()
-})
-
-
+    // Inicializa o carrossel exibindo a primeira imagem
+    atualizarCarrossel();
